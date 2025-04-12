@@ -41,7 +41,7 @@ class Solution(object):
         i,j --> j,n-i -->n-i,n-j --> n-j,i 
         0,0 --> 0,3 --> 3,3 --> 3,0
         0,1 --> 1,3 --> 3,2 --> 2,0
-        We will have to go till i = n-1 and j = n/2
+        We will have to go till i = n/2 and j = n-i-1
         """
         n = len(matrix)
         m = n-1
