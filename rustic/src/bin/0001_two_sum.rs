@@ -52,4 +52,5 @@ impl Solution {
 fn main() {
     let result = Solution::two_sum(vec![2,11,7,15], 9);
     println!("{:?}", result);
+    
 }
