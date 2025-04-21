@@ -4,7 +4,7 @@ impl Solution {
         return Self::approach_2(&nums, target);
     }
 
-    #[warn(dead_code)]
+    #[allow(dead_code)]
     pub fn approach_1(nums: &Vec<i32>, target: i32) -> Vec<i32> {
         let n = nums.len();
         for i in 0..n {
