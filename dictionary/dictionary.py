@@ -64,7 +64,7 @@ class Dictionary():
             return
         if node.left:
             self.print_node_lexical(node.left)
-        print(node.name)
+        print(f"{node.name} --> {node.meaning}")
         if node.right:
             self.print_node_lexical(node.right)
 
@@ -76,7 +76,7 @@ class Dictionary():
             return
         if node.right:
             self.print_node_reverse(node.right)
-        print(node.name)
+        print(f"{node.name} --> {node.meaning}")
         if node.left:
             self.print_node_reverse(node.left)
 
@@ -88,6 +88,8 @@ d = Dictionary()
 d.load_data()
 print(f"Meaning of ebullient --> {d.get_meaning('ebullient')}")
 print('-'*20)
+print("Dictionary in Ascending order: ")
 d.print_lexical_order()
 print('-'*20)
+print("Dictionary in Descending order: ")
 d.print_reverse_order()
