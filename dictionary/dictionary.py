@@ -44,7 +44,17 @@ class Dictionary():
                 prev.left = node 
             else:
                 prev.right = node
-            
+
+    def delete_node(self, word):
+        prev = None
+        current = self.head 
+        child_type = None
+        while current and current.name != word:
+            prev = current
+            if current.name > word:
+                current = current.left
+            else:
+                current = current.right
 
     def get_meaning(self, word):
         if not self.head:
@@ -84,12 +94,13 @@ class Dictionary():
         self.print_node_reverse(self.head)
 
 
-d = Dictionary()
-d.load_data()
-print(f"Meaning of ebullient --> {d.get_meaning('ebullient')}")
-print('-'*20)
-print("Dictionary in Ascending order: ")
-d.print_lexical_order()
-print('-'*20)
-print("Dictionary in Descending order: ")
-d.print_reverse_order()
+if __name__ == "__main__":
+    d = Dictionary()
+    d.load_data()
+    print(f"Meaning of ebullient --> {d.get_meaning('ebullient')}")
+    print('-'*20)
+    print("Dictionary in Ascending order: ")
+    d.print_lexical_order()
+    print('-'*20)
+    print("Dictionary in Descending order: ")
+    d.print_reverse_order()
